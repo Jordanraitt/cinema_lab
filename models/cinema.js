@@ -18,4 +18,8 @@ Cinema.prototype.checkByYear = function(year){
   return this.films.some(film => film.year === year)
 }
 
+Cinema.prototype.allCheckLength = function(length){
+  return this.films.every(film => film.length > length);
+}
+
 module.exports = Cinema;
