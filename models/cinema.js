@@ -22,4 +22,9 @@ Cinema.prototype.allCheckLength = function(length){
   return this.films.every(film => film.length > length);
 }
 
+Cinema.prototype.timeOfAllFilms = function(){
+  const reducer = (a, film) => a + film.length
+  return this.films.reduce(reducer, 0)
+}
+
 module.exports = Cinema;
